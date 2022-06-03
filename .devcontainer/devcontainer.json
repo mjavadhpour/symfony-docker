@@ -1,0 +1,30 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+	"name": "Symfony devlopment container",
+	"dockerComposeFile": [
+		"../docker-compose.yml",
+		"../docker-compose.override.yml"
+	],
+	"service": "php",
+	"workspaceFolder": "/srv/app",
+
+	"settings": {
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true
+		},
+		"editor.tabSize": 2,
+		"intelephense.environment.phpVersion": "8.1.0"
+	},
+
+	"extensions": [
+		// PHP
+		"bmewburn.vscode-intelephense-client",
+		"neilbrayfield.php-docblocker",
+		"xdebug.php-debug"
+		// END PHP
+	]
+}
